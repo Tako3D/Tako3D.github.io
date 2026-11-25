@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tako 3D · Catálogo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:wght@400;500;700;800;900&display=swap">
+<style>
+/* VOICE everyday small-business: friendly, crafted, the brand's own ukiyo-e sticker look
+   IDEA the Tako 3D sticker itself: cream paper, navy outline with 3D drop, red sun, blue waves
+   PICTURE the official full-colour logo, large, on a cream panel over a seigaiha wave band
+   COLOUR brand palette only: navy #040B36 ground, cream #FAEED2 panels, blue #254B98, red #E8371D, orange #F7542F
+   TYPE Rubik Mono One headlines + Rubik (brand package recommendation)
+   LAYOUT laptop: cream link panel left (sticky), navy catalogue right; phone: panel, then catalogue */
+:root{--navy:#040B36;--blue:#254B98;--deep:#0B2967;--red:#E8371D;--orange:#F7542F;--cream:#FAEED2;--silver:#8E92A4;--paper:#FFF8E8;--tile:#F3E1BB;color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:24px;background:var(--navy)}
+body{margin:0;background:var(--navy);color:var(--cream);font:16px/1.55 Rubik,system-ui,sans-serif;font-weight:400;overflow-x:clip}
+h1,h2{font-family:"Rubik Mono One",Rubik,sans-serif;font-weight:400;line-height:1.05;margin:0;text-wrap:balance}
+h3{font-family:Rubik,sans-serif;font-weight:900;line-height:1.15;margin:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.wrap{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr)}
+@media(min-width:900px){.wrap{grid-template-columns:410px minmax(0,1fr);gap:40px;padding:32px max(3vw,16px)}.side{position:sticky;top:32px;align-self:start;border-radius:26px;border:4px solid var(--navy);box-shadow:0 8px 0 var(--deep)}}
+.side{position:relative;background:var(--cream);color:var(--navy);overflow:hidden;padding-bottom:64px}
+.side::after{content:"";position:absolute;left:0;right:0;bottom:0;height:56px;background:var(--blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='20'%3E%3Cg fill='none' stroke='%23FAEED2' stroke-opacity='.55' stroke-width='2'%3E%3Ccircle cx='20' cy='20' r='18'/%3E%3Ccircle cx='20' cy='20' r='12'/%3E%3Ccircle cx='20' cy='20' r='6'/%3E%3Ccircle cx='0' cy='10' r='18'/%3E%3Ccircle cx='40' cy='10' r='18'/%3E%3C/g%3E%3C/svg%3E")}
+.logo{display:block;width:min(300px,78%);height:auto;margin:22px auto 4px;filter:drop-shadow(0 6px 0 rgba(11,41,103,.18))}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.logo{animation:bob 4s ease-in-out infinite}
+.tagline{margin:0 24px;text-align:center;font-weight:700;font-size:16px;color:var(--deep)}
+.links{list-style:none;margin:0;padding:20px 22px 8px;display:grid;gap:14px}
+.lk{display:flex;align-items:center;gap:14px;min-height:62px;padding:10px 16px;border-radius:16px;background:var(--navy);color:var(--cream);text-decoration:none;font-weight:700;font-size:17px;border:3px solid var(--navy);box-shadow:0 5px 0 var(--blue);transition:transform .12s,box-shadow .12s}
+.lk:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--blue)}
+.lk:active{transform:translateY(3px);box-shadow:0 2px 0 var(--blue)}
+.lk svg{flex:none;width:32px;height:32px}
+.lk span{display:grid;line-height:1.25}
+.lk small{font-weight:400;font-size:13px;color:#C9CCE0}
+.lk.main{background:var(--red);box-shadow:0 5px 0 var(--navy)}
+.lk.main:hover{box-shadow:0 7px 0 var(--navy)}
+.lk.main small{color:#FFE0D6}
+.lk:focus-visible,.chip:focus-visible,.order:focus-visible,.copy:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.num{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 12px;padding:10px 22px 18px;font-size:14px;color:var(--deep)}
+.num b{font-size:16px;color:var(--navy);white-space:nowrap;font-variant-numeric:tabular-nums}
+.copy{min-height:38px;padding:0 14px;border-radius:999px;border:2px solid var(--navy);background:transparent;color:var(--navy);font:700 14px Rubik,sans-serif;cursor:pointer}
+.copy:hover{background:var(--navy);color:var(--cream)}
+.main-col{padding:30px max(4vw,16px) 44px}
+@media(min-width:900px){.main-col{padding:10px 0 40px}}
+.head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px 24px;margin-bottom:20px}
+.title{display:flex;align-items:center;gap:14px}
+.title img{width:84px;height:auto;flex:none}
+.head h2{font-size:clamp(26px,4vw,38px);color:var(--cream);text-shadow:0 4px 0 var(--blue)}
+.head p{margin:6px 0 0;color:#C9CCE0;max-width:50ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:0 18px;border-radius:999px;border:2px solid var(--blue);background:transparent;color:var(--cream);font:700 15px Rubik,sans-serif;cursor:pointer}
+.chip:hover{border-color:var(--cream)}
+.chip[aria-pressed=true]{background:var(--red);border-color:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:20px}
+.card{background:var(--paper);color:var(--navy);border:3px solid var(--navy);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 0 var(--blue)}
+.pic{aspect-ratio:1/1;background:var(--tile);position:relative;border-bottom:3px solid var(--navy)}
+.pic svg{position:absolute;inset:0;width:100%;height:100%}
+.tag{position:absolute;left:12px;top:12px;background:var(--navy);color:var(--cream);font-size:13px;font-weight:800;padding:4px 10px;border-radius:999px}
+.stock{position:absolute;right:12px;top:12px;background:var(--paper);color:var(--navy);border:2px solid var(--navy);font-size:12px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.stock.last{background:var(--orange);color:#fff;border-color:var(--orange)}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tag.corp{background:var(--red)}
+.order.red{background:var(--red)}
+.order.red:hover{background:var(--orange)}
+.slides{position:absolute;inset:0;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.slides::-webkit-scrollbar{display:none}
+.pic .slides img{position:static;flex:none;width:100%;height:100%;object-fit:cover;scroll-snap-align:start}
+.slides:focus-visible{outline:3px solid var(--orange);outline-offset:-3px}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:2px solid var(--navy);background:var(--paper);color:var(--navy);font:900 26px/1 Rubik,sans-serif;cursor:pointer;display:grid;place-items:center;padding:0 0 3px}
+.nav:hover{background:var(--cream)}
+.nav:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.nav.prev{left:10px}.nav.next{right:10px}
+.count{position:absolute;right:12px;bottom:12px;background:var(--navy);color:var(--cream);font-size:13px;font-weight:700;padding:3px 10px;border-radius:999px;font-variant-numeric:tabular-nums}
+.works-sec .order{margin-top:auto}
+.works-sec{margin-top:56px;padding-top:40px;border-top:3px dashed var(--blue)}
+.card .body p:empty{display:none}
+.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.body h3{font-size:20px;color:var(--navy)}
+.body p{margin:0;color:#3A4166;font-size:14px}
+.row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 10px;margin-top:auto;padding-top:6px}
+.price{font-weight:800;font-size:18px;white-space:nowrap;color:var(--red)}
+.min{font-size:13px;color:#3A4166;font-weight:700;white-space:nowrap}
+.order{display:flex;align-items:center;justify-content:center;gap:8px;min-height:46px;border-radius:12px;background:var(--navy);color:var(--cream);text-decoration:none;font-weight:800;font-size:15px}
+.order:hover{background:var(--blue)}
+.order svg{width:22px;height:22px}
+.note{margin:26px 0 0;font-size:13px;color:var(--silver)}
+.toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,40px);opacity:0;background:var(--cream);color:var(--navy);padding:10px 18px;border-radius:999px;font-weight:800;font-size:14px;transition:.2s;pointer-events:none;border:2px solid var(--navy)}
+.toast.on{transform:translate(-50%,0);opacity:1}
+@media(prefers-reduced-motion:reduce){.logo{animation:none}.lk{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <aside class="side">
+    <img class="logo" src="assets/tako3d-logo.png" alt="Logo de Tako 3D: pulpo azul con un carrete de filamento" width="1000" height="1000">
+    <h1 class="sr">Tako 3D</h1>
+    <p class="tagline">Impresiones 3D a color en Paraguay: llaveros, imanes, adornos y regalos corporativos.</p>
+    <ul class="links" id="links"></ul>
+    <div class="num">WhatsApp: <b id="numTxt"></b><button class="copy" id="copyBtn" type="button">Copiar número</button></div>
+  </aside>
+
+  <main class="main-col" id="catalogo">
+    <div class="head">
+      <div>
+        <div class="title"><img src="assets/tako3d-pulpo.png" alt="" width="512" height="387"><h2>Catálogo</h2></div>
+        <p>Elegí un producto y te escribimos por WhatsApp para coordinar colores, cantidad y entrega.</p>
+      </div>
+      <div class="chips" role="group" aria-label="Filtrar catálogo" id="chips"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="note" id="stockNote"></p>
+
+    <section class="works-sec" id="trabajos">
+      <div class="head">
+        <div>
+          <h2>Trabajos realizados</h2>
+          <p>Piezas que ya hicimos, vendidas o por encargo. Si te gusta alguna, te hacemos una igual, en otros colores o con tu propio diseño.</p>
+        </div>
+      </div>
+      <div class="grid" id="works"></div>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+{
+/* ====== EDITÁ ACÁ ====== */
+const CONFIG = {
+  whatsapp: "595981918037",        // código de país + número, sin + ni espacios
+  whatsappShow: "+595 981 918 037",
+  instagram: "",                   // ej. "https://instagram.com/tako3d" (vacío = se oculta)
+  makerworld: ""                   // ej. link a tu perfil de MakerWorld (vacío = se oculta)
+};
+const STOCK_DATE = "24 de noviembre de 2026";
+/* Productos de la planilla que NO se muestran en la página aunque tengan stock */
+const EXCLUDE = ["Gato Flexi - Blanco", "Gato resorte"];
+/* sheet: nombre exacto en la pestaña Stock_Productos del Excel (lo usa la actualización automática).
+   price: null = "Consultar". stock: unidades disponibles (0 = no se muestra). img: foto opcional, ej. "assets/fotos/luffy.jpg" */
+const PRODUCTS = [
+  {name:"Perros fantasma", sheet:"Perros fantasma", img:"assets/fotos/perros-fantasma.jpg", desc:"Set de 4 figuras, precio por el set completo", cat:"Figuras", size:"Pequeño", price:20000, stock:1},
+  {name:"Llavero Luffy", sheet:"Llavero Luffy", img:"assets/fotos/luffy.jpg", cat:"Llaveros", size:"Pequeño", price:7000, stock:2},
+  {name:"Llavero Harry Potter", sheet:"Llavero Harry Potter", img:"assets/fotos/harry-potter.jpg", cat:"Llaveros", size:"Pequeño", price:7000, stock:1},
+  {name:"Llavero Spider-Man Blanco", sheet:"Llavero Spider-Man Blanco", img:"assets/fotos/spiderman-blanco.jpg", cat:"Llaveros", size:"Pequeño", price:6000, stock:2},
+  {name:"Llavero Spider-Man Negro", sheet:"Llavero Spider-Man Negro", img:"assets/fotos/spiderman-negro.jpg", cat:"Llaveros", size:"Pequeño", price:6000, stock:1},
+  {name:"Llavero Gato Blanco", sheet:"Llavero Gato - Blanco", img:"assets/fotos/gato-blanco.jpg", cat:"Llaveros", size:"Pequeño", price:6000, stock:1},
+  {name:"Llavero Gato Negro", sheet:"Llavero Gato - Negro", img:"assets/fotos/gato-negro.jpg", cat:"Llaveros", size:"Pequeño", price:6000, stock:1},
+  {name:"Llavero Máscara Oni", sheet:"Llavero Máscara Oni", img:"assets/fotos/oni.jpg", cat:"Llaveros", size:"Pequeño", price:6000, stock:2},
+  {name:"Llavero Perro inflable", sheet:"Llavero Perro inflable", img:"assets/fotos/perro-globo.jpg", cat:"Llaveros", size:"Pequeño", price:6000, stock:1},
+  {name:"Llavero F1 Blanco/negro", sheet:"Llavero F1 - Blanco/negro", img:"assets/fotos/f1.jpg", cat:"Llaveros", size:"Pequeño", price:10000, stock:2},
+  {name:"Pez hueso", sheet:"Pez hueso", img:"assets/fotos/pez-hueso.jpg", cat:"Llaveros", size:"Pequeño", price:8000, stock:1},
+  {name:"Kunai Kakashi", sheet:"Kunai Kakashi", img:"assets/fotos/kunai.jpg", cat:"Llaveros", size:"Pequeño", desc:"Kunai fidget spinner", price:15000, stock:1},
+  {name:"Gatos pareja", sheet:"Gatos pareja", img:"assets/fotos/gatos-pareja.jpg", cat:"Llaveros", size:"Pequeño", price:12000, stock:1},
+  {name:"Gato Flexi Negro", sheet:"Gato Flexi - Negro", img:"assets/fotos/gato-flexi-negro.jpg", cat:"Llaveros", size:"Pequeño", price:8000, stock:4},
+  {name:"Figura Hello Kitty", sheet:"Llavero Hello Kitty", img:"assets/fotos/hello-kitty.jpg", desc:"Figura, también se puede hacer como llavero", cat:"Figuras", size:"Pequeño", price:20000, stock:2},
+  {name:"Figura Scream", sheet:"Figura Scream", img:"assets/fotos/scream.jpg", cat:"Llaveros", size:"Pequeño", price:10000, stock:0},
+  {name:"Naruto Ramen", sheet:"Naruto Ramen", img:"assets/fotos/naruto.jpg", cat:"Llaveros", size:"Pequeño", price:15000, stock:0},
+  {name:"Calavera Frankenstein", sheet:"Calavera Frankestein", img:"assets/fotos/frankenstein.jpg", cat:"Imanes", size:"Pequeño", price:8000, stock:1},
+  {name:"Calavera Pirata", sheet:"Calavera Pirata", img:"assets/fotos/pirata.jpg", cat:"Imanes", size:"Pequeño", price:8000, stock:1},
+  {name:"Adorno navideño Homero", sheet:"Adorno navideño Homero", img:"assets/fotos/homero.jpg", cat:"Adornos navideños", size:"Pequeño", price:15000, stock:1}
+];
+/* Trabajos realizados: vendidos o hechos por encargo (no hace falta stock) */
+const WORKS = [
+  {name:"Micrófonos con logo", imgs:["assets/fotos/microfonos.jpg"], tag:"Corporativo", desc:"Micrófonos personalizados con el logo de tu marca, ideales como regalo corporativo."},
+  {name:"Llavero casco de obra", imgs:["assets/fotos/casco.jpg"], tag:"Corporativo", desc:"Para constructoras y ferreterías, en el color de tu marca."},
+  {name:"Llaveros bailarina", imgs:["assets/fotos/bailarina-1.jpg","assets/fotos/bailarina-2.jpg","assets/fotos/bailarina-3.jpg"], tag:"Llavero", desc:"Siluetas de ballet en tres poses, ideales para academias de danza y recitales."},
+  {name:"Llaveros Gorillaz", imgs:["assets/fotos/gorillaz-1.jpg","assets/fotos/gorillaz-2.jpg","assets/fotos/gorillaz-3.jpg","assets/fotos/gorillaz-4.jpg","assets/fotos/gorillaz-5.jpg"], tag:"Llavero", desc:"Colección de cinco llaveros planos en blanco y negro."},
+  {name:"Dock para Switch 2 Zelda", imgs:["assets/fotos/dock-zelda.jpg"], tag:"Gamer", desc:"Base para la consola con el escudo en relieve, a dos colores."},
+  {name:"Adorno navideño Pokébola", imgs:["assets/fotos/pokebola.jpg"], tag:"Adorno navideño", desc:"Esfera para el árbol con cinta dorada."},
+  {name:"Llavero Scream", imgs:["assets/fotos/scream.jpg"], tag:"Llavero", desc:"Figura en dos colores con argolla metálica."},
+  {name:"Llavero Naruto Ramen", imgs:["assets/fotos/naruto.jpg"], tag:"Llavero", desc:"Llavero plano en blanco y negro."}
+];
+/* ======================= */
+
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const wa = msg => "https://wa.me/" + encodeURIComponent(CONFIG.whatsapp) + "?text=" + encodeURIComponent(msg);
+
+const ICO = {
+  wa:'<svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="15" fill="#25D366"/><path d="M9 23l1.2-3.6A7.5 7.5 0 1 1 13 22z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M13.2 12.6c.3-.6.8-.6 1-.1l.6 1.4c.1.3 0 .5-.3.8-.2.2-.2.4 0 .7.6 1 1.4 1.7 2.4 2.2.3.1.5.1.7-.1.3-.4.5-.5.8-.4l1.3.6c.4.2.4.7 0 1.1-.8.8-2 .9-3.6 0-1.7-1-2.9-2.4-3.3-4-.2-.8 0-1.6.4-2.2z" fill="#fff"/></svg>',
+  grid:'<svg viewBox="0 0 32 32"><rect x="4" y="4" width="10" height="10" rx="2.5" fill="#FAEED2"/><rect x="18" y="4" width="10" height="10" rx="2.5" fill="#F7542F"/><rect x="4" y="18" width="10" height="10" rx="2.5" fill="#F7542F"/><rect x="18" y="18" width="10" height="10" rx="2.5" fill="#FAEED2"/></svg>',
+  gift:'<svg viewBox="0 0 32 32"><rect x="5" y="13" width="22" height="15" rx="2" fill="#FAEED2"/><rect x="3" y="9" width="26" height="6" rx="1.5" fill="#E8371D"/><rect x="14" y="9" width="4" height="19" fill="#254B98"/><path d="M16 9c-2-5-8-5-7-1 .5 2 4 1 7 1zm0 0c2-5 8-5 7-1-.5 2-4 1-7 1z" fill="#F7542F"/></svg>',
+  ig:'<svg viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="24" rx="7" fill="none" stroke="#FAEED2" stroke-width="3"/><circle cx="16" cy="16" r="5.5" fill="none" stroke="#F7542F" stroke-width="3"/><circle cx="23" cy="9" r="1.8" fill="#FAEED2"/></svg>',
+  star:'<svg viewBox="0 0 32 32"><path d="M16 3l3.8 7.9 8.7 1.2-6.3 6 1.6 8.6L16 22.6l-7.8 4.1 1.6-8.6-6.3-6 8.7-1.2z" fill="#FAEED2" stroke="#F7542F" stroke-width="2" stroke-linejoin="round"/></svg>',
+  mw:'<svg viewBox="0 0 32 32"><path d="M16 3l11 6v14l-11 6-11-6V9z" fill="#FAEED2"/><path d="M16 3l11 6-11 6L5 9z" fill="#E8371D"/></svg>'
+};
+
+const links = [
+  {href: wa("¡Hola Tako 3D! Quisiera hacer una consulta."), ico:"wa", t:"Escribinos por WhatsApp", s:"Pedidos y consultas", main:true},
+  {href:"#catalogo", ico:"grid", t:"Ver catálogo", s:PRODUCTS.filter(p => p.stock > 0).length + " productos en stock"},
+  {href:"#trabajos", ico:"star", t:"Trabajos realizados", s:"Encargá uno igual o con tu diseño"},
+  {href: wa("¡Hola Tako 3D! Quisiera cotizar regalos corporativos para mi empresa."), ico:"gift", t:"Regalos corporativos", s:"Cotizá llaveros y más con tu logo"},
+  CONFIG.instagram && {href:CONFIG.instagram, ico:"ig", t:"Instagram", s:"Mirá nuestros trabajos"},
+  CONFIG.makerworld && {href:CONFIG.makerworld, ico:"mw", t:"MakerWorld", s:"Nuestros diseños"}
+].filter(Boolean);
+
+document.getElementById("links").innerHTML = links.map(l =>
+  `<li><a class="lk${l.main?" main":""}" href="${esc(l.href)}"${l.href[0]==="#"?"":' target="_blank" rel="noopener"'}>${ICO[l.ico]}<span>${esc(l.t)}<small>${esc(l.s)}</small></span></a></li>`
+).join("");
+document.getElementById("numTxt").textContent = CONFIG.whatsappShow;
+
+/* Ilustraciones por categoría, en la paleta de la marca */
+const N="#040B36",B="#254B98",D="#0B2967",R="#E8371D",O="#F7542F",C="#FAEED2",S="#8E92A4";
+const TINTS=[B,R,O,D];
+const ART = {
+  "Llaveros": c => `<ellipse cx="62" cy="80" rx="32" ry="4" fill="${N}" opacity=".2"/><circle cx="36" cy="24" r="11" fill="none" stroke="${S}" stroke-width="4"/><circle cx="36" cy="24" r="11" fill="none" stroke="${N}" stroke-width="1" opacity=".4"/><path d="M44 31l6 5" stroke="${S}" stroke-width="4" stroke-linecap="round"/><g transform="rotate(10 70 52)"><rect x="46" y="32" width="48" height="40" rx="12" fill="${c}" stroke="${N}" stroke-width="2.5"/><circle cx="56" cy="42" r="3.5" fill="${C}" stroke="${N}" stroke-width="1.5"/><path d="M70 46l3.5 7 7.5.8-5.6 5 1.6 7.4-7-3.8-7 3.8 1.6-7.4-5.6-5 7.5-.8z" fill="${C}" stroke="${N}" stroke-width="1.5" stroke-linejoin="round"/></g>`,
+  "Imanes": c => `<ellipse cx="60" cy="82" rx="34" ry="4" fill="${N}" opacity=".2"/><path d="M34 16h18v36a8 8 0 0 0 16 0V16h18v36a26 26 0 0 1-52 0z" fill="${c}" stroke="${N}" stroke-width="2.5" stroke-linejoin="round"/><rect x="34" y="16" width="18" height="12" fill="${S}" stroke="${N}" stroke-width="2.5"/><rect x="68" y="16" width="18" height="12" fill="${S}" stroke="${N}" stroke-width="2.5"/><path d="M24 22h-8M24 30h-10M96 22h8M96 30h10" stroke="${O}" stroke-width="3" stroke-linecap="round"/>`,
+  "Adornos navideños": c => `<ellipse cx="60" cy="84" rx="26" ry="3.5" fill="${N}" opacity=".2"/><path d="M60 4v12" stroke="${S}" stroke-width="2"/><rect x="53" y="14" width="14" height="8" rx="2" fill="${S}" stroke="${N}" stroke-width="1.5"/><circle cx="60" cy="50" r="28" fill="${c}" stroke="${N}" stroke-width="2.5"/><path d="M33 46c18 6 36 6 54 0M33 56c18 6 36 6 54 0" stroke="${C}" stroke-width="3" fill="none"/><path d="M60 41l2.5 5 5.5.6-4 3.8 1 5.4-5-2.6-5 2.6 1-5.4-4-3.8 5.5-.6z" fill="${C}"/><path d="M44 36c4-6 9-9 14-10" stroke="${C}" stroke-width="3" fill="none" stroke-linecap="round" opacity=".6"/>`
+};
+const fmt = n => "Gs. " + n.toLocaleString("es-PY").replace(/,/g, ".");
+
+const avail = PRODUCTS.filter(p => p.stock > 0);
+const cats = [["todos","Todos"], ...[...new Set(avail.map(p => p.cat))].map(c => [c, c])];
+let current = "todos";
+const chips = document.getElementById("chips");
+const grid = document.getElementById("grid");
+
+const renderChips = () => {
+  chips.innerHTML = cats.map(([k,l]) => `<button class="chip" type="button" data-k="${esc(k)}" aria-pressed="${k===current}">${esc(l)}</button>`).join("");
+};
+const renderGrid = () => {
+  const list = avail.filter(p => current==="todos" || p.cat===current);
+  grid.innerHTML = list.map((p, i) => {
+    const art = ART[p.cat] || ART["Llaveros"];
+    const pic = p.img ? `<img src="${esc(p.img)}" alt="${esc(p.name)}" loading="lazy">` : `<svg viewBox="0 0 120 90" aria-hidden="true">${art(TINTS[i % TINTS.length])}</svg>`;
+    const st = p.stock === 1 ? `<span class="stock last">Última unidad</span>` : `<span class="stock">${p.stock} disponibles</span>`;
+    const msg = "¡Hola Tako 3D! Me interesa: " + p.name + (p.price ? " (" + fmt(p.price) + ")" : "") + ". ¿Está disponible?";
+    return `
+    <article class="card">
+      <div class="pic">${pic}<span class="tag">${esc(p.cat)}</span>${st}</div>
+      <div class="body">
+        <h3>${esc(p.name)}</h3>
+        <p>${esc(p.desc || p.size)}</p>
+        <div class="row"><span class="price">${p.price ? esc(fmt(p.price)) : "Consultar precio"}</span></div>
+        <a class="order" target="_blank" rel="noopener" href="${esc(wa(msg))}">${ICO.wa}Pedir por WhatsApp</a>
+      </div>
+    </article>`;
+  }).join("");
+};
+chips.addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  current = b.dataset.k; renderChips(); renderGrid();
+});
+renderChips(); renderGrid();
+document.getElementById("stockNote").textContent = "Stock al " + STOCK_DATE + ".";
+document.getElementById("works").innerHTML = WORKS.map(w => {
+  const msg = "¡Hola Tako 3D! Vi en su página el trabajo \"" + w.name + "\" y quisiera encargar uno. ¿Me pasan precio?";
+  return `
+    <article class="card">
+      <div class="pic">${w.imgs.length > 1
+        ? `<div class="slides" tabindex="0" aria-label="Fotos de ${esc(w.name)}">${w.imgs.map((src, k) => `<img src="${esc(src)}" alt="${esc(w.name)}, foto ${k+1}" loading="lazy">`).join("")}</div>
+           <button class="nav prev" type="button" aria-label="Foto anterior">‹</button><button class="nav next" type="button" aria-label="Foto siguiente">›</button>
+           <span class="count">1/${w.imgs.length}</span>`
+        : `<img src="${esc(w.imgs[0])}" alt="${esc(w.name)}" loading="lazy">`}<span class="tag${w.tag==="Corporativo"?" corp":""}">${esc(w.tag)}</span></div>
+      <div class="body">
+        <h3>${esc(w.name)}</h3>
+        <p>${esc(w.desc)}</p>
+        <a class="order red" target="_blank" rel="noopener" href="${esc(wa(msg))}">${ICO.wa}Encargar uno igual</a>
+      </div>
+    </article>`;
+}).join("");
+const worksEl = document.getElementById("works");
+const go = (sl, dir) => sl.scrollBy({left: dir * sl.clientWidth, behavior: "smooth"});
+worksEl.addEventListener("click", e => {
+  const b = e.target.closest(".nav"); if (!b) return;
+  go(b.parentElement.querySelector(".slides"), b.classList.contains("next") ? 1 : -1);
+});
+worksEl.addEventListener("keydown", e => {
+  const sl = e.target.closest(".slides"); if (!sl) return;
+  if (e.key === "ArrowRight") { e.preventDefault(); go(sl, 1); }
+  if (e.key === "ArrowLeft") { e.preventDefault(); go(sl, -1); }
+});
+worksEl.querySelectorAll(".slides").forEach(sl => {
+  const c = sl.parentElement.querySelector(".count"), n = sl.children.length;
+  sl.addEventListener("scroll", () => { c.textContent = (Math.round(sl.scrollLeft / sl.clientWidth) + 1) + "/" + n; }, {passive: true});
+});
+
+const toast = document.getElementById("toast");
+let tId;
+const say = t => { toast.textContent = t; toast.classList.add("on"); clearTimeout(tId); tId = setTimeout(() => toast.classList.remove("on"), 1800); };
+document.getElementById("copyBtn").addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(CONFIG.whatsappShow); say("Número copiado"); }
+  catch (err) { say(CONFIG.whatsappShow); }
+});
+}
+</script>
+</body>
+</html>
